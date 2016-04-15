@@ -15,9 +15,16 @@ Always use:
 
     sage-develop
 
-New test cases:
+Further test:
+
     sage: from sage_modabvar import J0
-    sage: J = J0(11); B= J.degeneracy_map(33,1).codomain()
+    sage: A = J0(43)[1]; B,_ = A.quotient(A.torsion_subgroup(2)); End(B).gens()
+
+
+New test cases:
+
+    sage: from sage_modabvar import J0
+    sage: J = J0(11); B = J.degeneracy_map(33,1).codomain()
     sage: type(B)
     # problem is that this is "getting out of the space"
 
